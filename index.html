@@ -37,4 +37,198 @@
       display: block;
     }
 
-    /* ========== H*
+    /* ========== HERO (hero.css 統合) ========== */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-size: 90px;              /* 調整しやすい最適値 */
+      color: #7b5cff;
+      -webkit-text-stroke: 0.4px #5a3fff;
+      line-height: 1.05;
+      letter-spacing: 0.04em;       /* 重複していたので1つに統合 */
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-size: 1.6rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* ========== PROFILE / SERVICES ========== */
+    .profile {
+      margin-top: 40px;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .about {
+      flex: 1;
+      padding: 24px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 12px;
+    }
+    .about h3 {
+      font-family: "Poppins";
+      margin-bottom: 10px;
+    }
+
+    /* --- Services --- */
+    .services {
+      flex: 1;
+      padding: 24px;
+    }
+
+    .services h3 {
+      font-family: "Poppins";
+      margin-bottom: 14px;
+    }
+
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+    }
+
+    .service-title,
+    .service-price {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .service-price {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .service-note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* ========== VIDEOS ========== */
+    .videos { margin-top: 40px; text-align: center; }
+    .videos h3 {
+      font-family: "Poppins";
+      margin-bottom: 16px;
+    }
+
+    .video-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      border: 3px solid #cfc3ff;
+      border-radius: 18px;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .video-card iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;   /* YouTube を綺麗にレスポンシブ化 */
+      border: 0;
+      border-radius: 12px;
+    }
+
+    /* ========== BUTTON / SNS ========== */
+    .twitter-lower { margin-top: 32px; }
+    .twitter-lower a {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff5ca1, #8b5cf6);
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      margin-top: 40px;
+      color: #9b9b9b;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 880px) {
+      .hero h1 { font-size: 56px; }
+      .hero p { font-size: 1.2rem; }
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo-box">
+      <img src="logo.png" alt="logo">
+    </div>
+  </header>
+
+  <section class="top-banner">
+    <img src="image/banner.jpg" alt="Top Banner">
+  </section>
+
+  <section class="hero">
+    <h1>ミキシングであなたの歌声を最前線へ</h1>
+    <p>落ち着いたサウンドと最大限の聞き心地を提供。歌ってみたMIXをメインに承ります。</p>
+  </section>
+
+  <section class="profile">
+    <div class="about">
+      <h3>プロフィール</h3>
+      <p>歌ってみたMIXを2025年から開始。<br>
+         シンプルな楽曲やバラード系統の楽曲を得意とする。<br>
+         本業は土木関係の施工管理技士。<br>
+         音源確認等DMいただいてからお時間いただきますが必ず返信いたします。</p>
+    </div>
+
+    <aside class="services">
+      <h3>サービス</h3>
+      <div class="service-item">
+        <span class="service-title">歌ってみたMIX</span>
+        <span class="service-price">¥1,000</span>
+      </div>
+      <p class="service-note">納期（基本10日～2週間）や音源の送り方はお問い合わせください。</p>
+    </aside>
+  </section>
+
+  <section class="videos">
+    <h3>実績</h3>
+
+    <div class="video-list">
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/llsn6Me77c4" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/d6eyyiWabBc" allowfullscreen></iframe></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/KVb6p74tvQA" allowfullscreen></iframe></div>
+    </div>
+
+    <div class="twitter-lower">
+      <a href="https://twitter.com/sisisigure" target="_blank">Twitter @sisisigure</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© SiG MIX — GitHub Pages • Deploy to <code>sigure490.github.io/sigure_mixing/</code></div>
+  </footer>
+
+</div>
+</body>
+</html>
